@@ -1,6 +1,10 @@
 package org.acme.geometry;
 
 public class Coordinate {
+	
+	private final double x;
+	
+	private final double y;
 
 	public Coordinate(){
 		this.x = 0.0;
@@ -21,7 +25,5 @@ public class Coordinate {
 	
 	
 
-	private final double x;
-	
-	private final double y;
+
 }
