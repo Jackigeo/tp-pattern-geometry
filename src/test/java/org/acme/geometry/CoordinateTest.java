@@ -10,9 +10,17 @@ public class CoordinateTest {
 	@Test
 	public void testDefaultConstructor(){
 		// TODO
-		//Coordinate c = new Coordinate();
-		//Assert.assertEquals(0.0, c.getX(), EPSILON);
-		//Assert.assertEquals(0.0, c.getY(), EPSILON);
+		Coordinate c = new Coordinate();
+		Assert.assertEquals(0.0, c.getX(), EPSILON);
+		Assert.assertEquals(0.0, c.getY(), EPSILON);
+	}
+	
+	@Test
+	public void testParamConstructor(){
+		// TODO	
+		Coordinate c1 = new Coordinate(0.5,1.0);
+		Assert.assertEquals(0.5, c1.getX(), EPSILON);
+		Assert.assertEquals(1.0, c1.getY(), EPSILON);
 	}
 
 }
