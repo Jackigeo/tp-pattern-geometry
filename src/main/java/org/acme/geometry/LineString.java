@@ -27,7 +27,7 @@ public class LineString implements Geometry {
 
 	@Override
 	public String getType() {
-		return "LineString";
+		return "LINESTRING";
 	}
 
 	@Override

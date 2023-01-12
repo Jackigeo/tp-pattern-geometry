@@ -31,7 +31,7 @@ public class PointTest {
 		// TODO
 		Coordinate c = new Coordinate(0.5,1.0);
 		Point p = new Point(c);
-		Assert.assertEquals("Point", p.getType());	
+		Assert.assertEquals("POINT", p.getType());	
 	}
 	
 
