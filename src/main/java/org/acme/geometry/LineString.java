@@ -60,6 +60,17 @@ public class LineString implements Geometry {
 		LineString clone = new LineString(clonePoints);
 		return clone;
 	}
+
+	@Override
+	public Envelope getEnvelope() {
+		EnvelopeBuilder builder = new EnvelopeBuilder();
+		
+		for(Point point : this.points) {
+			builder.insert(point.getCoordinate());
+		}
+		
+		return builder.build();
+	}
 		
 	
 	
