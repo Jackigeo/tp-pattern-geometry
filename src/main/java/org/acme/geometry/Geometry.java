@@ -6,5 +6,5 @@ public interface Geometry {
 	public Boolean isEmpty();
 	
 	public void translate(double dx, double dy);
-
+	public Geometry clone();
 }

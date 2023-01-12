@@ -1,5 +1,7 @@
 package org.acme.geometry;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,5 +80,27 @@ public class LineStringTest {
 	    Assert.assertEquals(4.0,ls.getPointN(1).getCoordinate().getY(),EPSILON);
 	    
 	}
+	
+	@Test
+	public void testClone(){
+		
+		Point a = new Point(new Coordinate(3.0,4.0));
+		Point b = new Point(new Coordinate(1.0,3.0));
+		
+		List<Point> points = new ArrayList<>();
+		
+		points.add(a);
+		points.add(b);
+		LineString ls = new LineString(points);
+		
+		Assert.assertEquals(ls.getPointN(0).getCoordinate(), ls.clone().getPointN(0).getCoordinate());
+		Assert.assertEquals(ls.getPointN(1).getCoordinate(), ls.clone().getPointN(1).getCoordinate());
+		
+		LineString lsC = ls.clone();
+		ls.translate(1.0, 1.0);
+		Assert.assertNotEquals(lsC.getPointN(0).getCoordinate(),ls.getPointN(0).getCoordinate());
+		
+	}
+	
 	
 }
