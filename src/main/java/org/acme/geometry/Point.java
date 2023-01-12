@@ -43,8 +43,4 @@ public class Point implements Geometry{
 		return clone;	
 	}
 		
-	
-	
-	
-
 }
