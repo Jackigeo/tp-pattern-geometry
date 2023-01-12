@@ -29,6 +29,11 @@ public class LineString implements Geometry {
 	public String getType() {
 		return "LineString";
 	}
+
+	@Override
+	public Boolean isEmpty() {
+		return points.isEmpty();
+	}
 	
 	
 	

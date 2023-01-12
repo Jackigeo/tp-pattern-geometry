@@ -30,6 +30,15 @@ public class PointTest {
 		Point p = new Point(c);
 		Assert.assertEquals("Point", p.getType());	
 	}
+	
+
+	@Test
+	public void testIsEmpty(){
+		Coordinate c = new Coordinate();
+		Point p = new Point(c);
+	    Assert.assertTrue(p.isEmpty());	
+	}
+	
 
 
 
